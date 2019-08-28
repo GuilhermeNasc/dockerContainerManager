@@ -1,0 +1,25 @@
+<!doctype html>
+
+<head>
+    <title>Hello from Docker</title>
+</head>
+
+<body>
+    <div>
+        {% for c in containers %}
+
+        {% if c.status == 'running' %}
+        <button type="button" style="background-color:black;
+        color:white;">
+            {{ c.name }}
+        </button>
+        {% else %}
+        <button type="button" style="background-color:red;
+                    color:white;">
+            {{ c.name }}
+        </button>
+        {% endif %}
+
+        {% endfor %}
+    </div>
+</body>
